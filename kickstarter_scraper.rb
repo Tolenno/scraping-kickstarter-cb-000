@@ -9,19 +9,19 @@ def create_project_hash
 
   kickstarter.css("li.project.grid_4").each do |project|
     title = project.css("h2.bbcard_name strong a").text
-    projects[title.to_sym] = {}
+    projects[title.to_sym] = {
+      image = projects.css("div.project-thumbnail a img").attribute("src").value
+      projects[image.to_sym] = {}
 
-    image = projects.css("div.project-thumbnail a img").attribute("src").value
-    projects[image.to_sym] = {}
+      description = projects.css("p.bbcard_blurb").text
+      projects[description.to_sym] = {}
 
-    description = projects.css("p.bbcard_blurb").text
-    projects[description.to_sym] = {}
+      location = projects.css("span.location-name").text
+      projects[location.to_sym] = {}
 
-    location = projects.css("span.location-name").text
-    projects[location.to_sym] = {}
-
-    percent_funded = projects.css("ul.project-stats li.first.funded strong").text.gsub("%", "").to_i
-    projects[percent_funded.to_sym] = {}
+      percent_funded = projects.css("ul.project-stats li.first.funded strong").text.gsub("%", "").to_i
+      projects[percent_funded.to_sym] = {}
+    }
   end
   projects
 end
