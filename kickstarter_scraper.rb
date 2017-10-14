@@ -6,6 +6,5 @@ def create_project_hash
   kickstarter = Nokogiri::HTML(html)
 end
 
-testing = "Bob"
 
 create_project_hash
