@@ -8,5 +8,5 @@ def create_project_hash
 end
 
 # projects: kickstarter.css("li.project.grid_4")
-# title: 
+# title: .bbcard_name > strong > a
 create_project_hash
