@@ -12,4 +12,5 @@ end
 # image: kickstarter.css("div.project-thumbnail a img").attribute("src").value
 # description: kickstarter.css("p.bbcard_blurb").text
 # location: kickstarter.css("span.location-name").text
+# percent_funded: kickstarter.css("li.funded strong").text
 create_project_hash
