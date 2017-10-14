@@ -14,7 +14,7 @@ def create_project_hash
     image = projects.css("div.project-thumbnail a img").attribute("src").value
     projects[image.to_sym] = {}
 
-    description = projects.css("div.project-thumbnail a img").attribute("src").value
+    description = projects.css("p.bbcard_blurb").text
     projects[image.to_sym] = {}
 
     location = projects.css("div.project-thumbnail a img").attribute("src").value
