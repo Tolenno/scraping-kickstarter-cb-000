@@ -21,7 +21,7 @@ def create_project_hash
     projects[location.to_sym] = {}
 
     percent_funded = projects.css("div.project-thumbnail a img").attribute("src").value
-    projects[image.to_sym] = {}
+    projects[percent_funded.to_sym] = {}
   end
   projects
 end
