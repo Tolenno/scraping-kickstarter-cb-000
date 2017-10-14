@@ -9,4 +9,3 @@ end
 testing = "Bob"
 
 create_project_hash
-binding.pry
