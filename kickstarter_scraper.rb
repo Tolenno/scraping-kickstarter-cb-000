@@ -10,5 +10,5 @@ end
 # projects: kickstarter.css("li.project.grid_4")
 # title: kickstarter.css("h2.bbcard_name strong a").text
 # image: kickstarter.css("div.project-thumbnail a img").attribute("src").value
-# image: kickstarter.css("p.bbcard_blurb").first.text
+# image: kickstarter.css("p.bbcard_blurb").text
 create_project_hash
