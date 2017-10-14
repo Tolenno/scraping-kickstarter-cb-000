@@ -17,7 +17,7 @@ def create_project_hash
     description = projects.css("p.bbcard_blurb").text
     projects[description.to_sym] = {}
 
-    location = projects.css("div.project-thumbnail a img").attribute("src").value
+    location = projects.css("span.location-name").text
     projects[location.to_sym] = {}
 
     percent_funded = projects.css("div.project-thumbnail a img").attribute("src").value
