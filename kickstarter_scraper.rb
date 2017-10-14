@@ -20,7 +20,7 @@ def create_project_hash
     location = projects.css("span.location-name").text
     projects[location.to_sym] = {}
 
-    percent_funded = projects.css("div.project-thumbnail a img").attribute("src").value
+    percent_funded = projects.css("ul.project-stats li.first.funded strong").text.gsub("%", "").to_i
     projects[percent_funded.to_sym] = {}
   end
   projects
